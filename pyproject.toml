@@ -1,0 +1,36 @@
+[project]
+name = "testcase-generator-mcp"
+version = "0.1.1"
+description = "Testcase Generator MCP Server for generating and managing test cases"
+readme = "README.md"
+requires-python = ">=3.10, <3.15"
+dependencies = [
+    "mcp[cli]>=1.10.1",
+    "typer>=0.16.0",
+    "pydantic>=2.12.5",
+]
+[project.authors]
+name = "EmptyRabbit"
+email = "qiuzhouxin@163.com"
+
+[project.scripts]
+testcase-generator-mcp = "testcase_generator_mcp.__main__:app"
+
+[project.urls]
+Repository = "https://github.com/EmptyRabbit/testcase-generator-mcp.git"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/testcase_generator_mcp"]
+
+[dependency-groups]
+dev = [
+    "hatch>=1.16.3",
+    "twine>=6.2.0",
+]
+
+[tool.hatch.build]
+packages = ["src/testcase_generator_mcp"]
