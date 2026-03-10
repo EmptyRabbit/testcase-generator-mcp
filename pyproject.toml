@@ -1,6 +1,6 @@
 [project]
 name = "testcase-generator-mcp"
-version = "0.1.1"
+version = "0.1.2"
 description = "Testcase Generator MCP Server for generating and managing test cases"
 readme = "README.md"
 requires-python = ">=3.10, <3.15"
@@ -9,7 +9,7 @@ dependencies = [
     "typer>=0.16.0",
     "pydantic>=2.12.5",
 ]
-[project.authors]
+[[project.authors]]
 name = "EmptyRabbit"
 email = "qiuzhouxin@163.com"
 
