@@ -6,7 +6,7 @@ from mcp.server.fastmcp import FastMCP
 from mcp.types import ToolAnnotations
 from pydantic import Field
 
-from testcase_generator_mcp.tool import generate_test_case_tool
+from testcase_generator_mcp.tool import generate_test_case_tool, markdown_to_xmind_tool
 
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 LOG_FILE = os.path.join(ROOT_DIR, "testcase-generator-mcp.log")
@@ -52,6 +52,21 @@ def generate_test_case(
     """
     prompt_content = generate_test_case_tool(is_need_xmind)
     return prompt_content
+
+
+def markdown_to_xmind_json() -> str:
+    """
+    获取Markdown转XMind的转换规则prompt
+
+    调用场景：用户要求"转换为xmind格式"、"生成xmind"，或使用mcp_xmind-generator_generate-mind-map工具前
+
+    功能：返回转换规则文档，指导AI将Markdown测试用例转换为XMind文件
+
+    Returns:
+        str: 转换规则文档内容
+    """
+    result = markdown_to_xmind_tool()
+    return result
 
 
 def run_sse():
