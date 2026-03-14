@@ -1,6 +1,6 @@
 [project]
 name = "testcase-generator-mcp"
-version = "0.1.5"
+version = "0.1.7"
 description = "Testcase Generator MCP Server for generating and managing test cases"
 readme = "README.md"
 requires-python = ">=3.10, <3.15"

@@ -2,7 +2,7 @@
 
 基于 Model Context Protocol (MCP) 的测试用例生成服务，让 AI 助手根据需求文档、技术文档、设计稿等上下文自动生成 Markdown 格式的测试用例，并可选导出为 Xmind 思维导图。
 
-![流程概览](https://github.com/EmptyRabbit/testcase-generator-mcp/blob/main/docs/process.jpg)
+![流程概览](https://raw.githubusercontent.com/EmptyRabbit/testcase-generator-mcp/ee46dedbbc7c6490a295649ce5ed02828f716b9a/docs/process.jpg)
 
 ## 功能特性
 
